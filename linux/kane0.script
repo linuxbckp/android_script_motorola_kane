@@ -1,0 +1,40 @@
+#!/bin/bash
+
+echo 'Kane Flash Script'
+
+./fastboot flash pit diskmap.pit
+./fastboot flash fwbl1 fwbl1.img
+./fastboot flash ldfw_a ldfw.img
+./fastboot flash ldfw_b ldfw.img
+./fastboot flash keystorage_a keystorage.img
+./fastboot flash keystorage_b keystorage.img
+./fastboot flash bootloader_a bootloader.img
+./fastboot flash bootloader_b bootloader.img
+./fastboot flash modem_a modem.bin
+./fastboot flash vbmeta_a vbmeta.img
+./fastboot flash oem_a oem.img
+./fastboot flash oem_b oem_other.img
+./fastboot flash logo_a logo.bin
+./fastboot flash dtbo_a dtbo.img
+./fastboot flash boot_a boot.img
+./fastboot flash logo_b logo.bin
+./fastboot flash dtbo_b dtbo.img
+./fastboot flash boot_b boot.img
+./fastboot flash system_a system.img_sparsechunk.0
+./fastboot flash system_a system.img_sparsechunk.1
+./fastboot flash system_a system.img_sparsechunk.2
+./fastboot flash system_a system.img_sparsechunk.3
+./fastboot flash system_a system.img_sparsechunk.4
+./fastboot flash system_a system.img_sparsechunk.5
+./fastboot flash system_a system.img_sparsechunk.6
+./fastboot flash system_a system.img_sparsechunk.7
+./fastboot flash system_a system.img_sparsechunk.8
+./fastboot flash system_a system.img_sparsechunk.9
+./fastboot flash system_a system.img_sparsechunk.10
+./fastboot flash system_b system_other.img_sparsechunk.0
+./fastboot flash system_b system_other.img_sparsechunk.1
+./fastboot flash system_b system_other.img_sparsechunk.2
+./fastboot flash vendor_a vendor.img
+./fastboot -w
+
+read -p "Press enter to exit."
